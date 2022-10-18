@@ -18,13 +18,16 @@
   <body>
     <main>
       <section>
-        <h1>My ToDo App</h1>
-        <input type="text" name="toDoInput" id="toDoInput" />
-        <button type="submit" id="addToDoButton">Add ToDo <i class="fa-solid fa-plus plus-icon"></i></button>
-        <ul id="toDoList"></ul>
-        <p>
-          Number of finished ToDos: <span id="numberOfFinishedToDos">0</span>
+        <h1>My ToDo</h1>
+        <p id="numberOfFinishedToDosParent">
+          <span id="numberOfFinishedToDos">0</span> completed
         </p>
+        <div>
+          <input type="text" name="toDoInput" id="toDoInput" />
+          <button type="submit" id="addToDoButton">OK</i></button>
+          <p id="warning">🗑️</p>
+        </div>
+        <ul id="toDoList"></ul>
       </section>
     </main>
   </body>

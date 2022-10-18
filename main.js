@@ -2,6 +2,7 @@ const addToDoButton = document.querySelector("#addToDoButton");
 const addToDoInput = document.querySelector("#toDoInput");
 const toDoList = document.querySelector("#toDoList");
 const numberOfFinishedToDos = document.querySelector("#numberOfFinishedToDos");
+const warning = document.querySelector("#warning");
 let toDoItems = [];
 let currentlyFinishedItems = parseInt(numberOfFinishedToDos.textContent);
 
@@ -9,8 +10,9 @@ addToDoButton.addEventListener("click", toDoListener);
 
 function toDoListener() {
   if (addToDoInput.value === "") {
-    alert("Write something");
+    warning.textContent = "Input must not be empty";
   } else {
+    warning.textContent = "";
     const toDoId = Date.now();
     toDoItems.push({ text: addToDoInput.value, completed: false, id: toDoId });
     const trashCan = document.createElement("img");
