@@ -63,6 +63,7 @@ li {
     animation-name: up, fadeIn;
     animation-duration: 700ms;
     transition: color 700ms;
+    cursor: pointer;
 }
 
 i {
