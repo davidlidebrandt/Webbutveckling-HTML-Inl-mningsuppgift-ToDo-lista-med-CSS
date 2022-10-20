@@ -11,12 +11,14 @@ addToDoButton.addEventListener("click", toDoListener);
 function toDoListener() {
   if (addToDoInput.value === "") {
     warning.textContent = "Input must not be empty";
+    warning.classList.add("blink");
   } else {
     warning.textContent = "";
+    warning.classList.remove("blink");
     const toDoId = Date.now();
     toDoItems.push({ text: addToDoInput.value, completed: false, id: toDoId });
-    const trashCan = document.createElement("img");
-    trashCan.src = "trashcan.svg";
+    const trashCan = document.createElement("i");
+    trashCan.classList.add("fa-regular","fa-trash-can", "fa-2xs");
     const toDoItem = document.createElement("li");
     toDoItem.textContent = addToDoInput.value;
     const hiddenToDoId = document.createElement("span");
