@@ -39,6 +39,7 @@ section {
     justify-items: center;
     background-color: #FFFFFF;
     animation: dropDown 800ms;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
 }
 
 button {
